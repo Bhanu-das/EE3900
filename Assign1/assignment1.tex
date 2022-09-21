@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{EE3900-assign1}
+\author{VEERAVALLI BHANU PRAKASH}
+\date{August 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{4.2 solution}
+$$x(n)={\{1, 2, 3, 4, 2, 1\}}$$
+$$X(z)=Z\{x(n)\}=\sum_{0}^{5}x(n)*(z^{-n}))$$
+$$X(z)=1*z^{0}+2*Z^{-1}+3*z^{-2}+4*z^{-3}+2*z^{-4}+1*z^{-5}$$
+\section{4.5 solution}
+$$y=a^nu(n)$$
+$$u(n)=
+\left\{
+	\begin{array}{ll}
+		1 & \mbox{if } n \geq 0 \\
+		0 & \mbox{if } n < 0
+	\end{array}
+\right.$$
+$$a^nu(n)=
+\left\{
+	\begin{array}{ll}
+		a^n & \mbox{if } n \geq 0 \\
+		0 & \mbox{if } n < 0
+	\end{array}
+\right.$$
+$$Z{\{a^nu(n)\}}=\sum_{-\infty}^{\infty}a^nu(n)z^{-n}$$
+$$Z{\{a^nu(n)\}}=\sum_{0}^{\infty}a^nz^{-n}$$
+$$Z{\{a^nu(n)\}}=\sum_{0}^{\infty}{\frac{a}{z}}^n$$
+$$ if \quad|z|>|a|\quad then \quad sum \quad of \quad G.P$$
+$$Z{\{a^nu(n)\}}=\frac{1}{1-{az^{-1}}}$$
+\section{5.1 solution }
+\begin{equation}
+    h(n) , n<5
+\end{equation}
+
+\begin{equation}
+    H(z) = \frac{1 + z^{-2}}{1 + \frac{1}{2}z^{-1}}
+\end{equation}
+\begin{center}
+    $1 + \frac{1}{2}z^{-1}\overline{)1 + z^{-2}(} 2z^{-1}$\\
+    ${2z^{-1} + z^{-2}}$\\
+    $1 + \frac{1}{2}z^{-1}\overline{)1-2z^{-1}(} -4$\\
+    $-4 - 2z^{-1}$\\
+    $\overline{5 + 0z^{-1}}$
+\end{center}
+Hence by long division will be 
+\begin{equation}
+    H(z) = 2z^{-1} -4 + \frac{5}{1 + \frac{1}{2}z^{-1}}
+\end{equation}
+\section{5.3 solution}
+From the graph we can say that maximim value of h(n) is 1.25. 
+The minimum value of graph is around -0.6.
+$$-0.6 >h(n)\geq.25$$
+The function is bounded between 1.25 and -0.6.
+\section{5.4 solution}
+$$h(n)=\bigg(-\frac{1}{2}\bigg)^nu(n)+\bigg(-\frac{1}{2}\bigg)^{n-2}u(n-2)$$
+Ratio test
+$$L=\lim_{n\to\infty} \bigg|\frac{h(n+1)}{h(n)}\bigg|$$
+$$h(n+1)=\bigg(-\frac{1}{2}\bigg)^{n+1}u(n+1)+\bigg(-\frac{1}{2}\bigg)^{n-1}u(n-1)$$
+$$h(n)=\bigg(-\frac{1}{2}\bigg)^nu(n)+\bigg(-\frac{1}{2}\bigg)^{n-2}u(n-2)$$
+$$ as \quad n \rightarrow \infty \qquad u(n)=u(n-1)=u(n+1)=u(n-2)=1$$
+$$h(n+1)={\{-\frac{1}{2}}\}{h(n)}$$
+$$\bigg|\frac{h(n+1)}{h(n)}\bigg|=\bigg|-\frac{1}{2}\bigg|=\frac{1}{2}$$
+$$L=\lim_{n\to\infty} \bigg|\frac{h(n+1)}{h(n)}\bigg|=\frac{1}{2}$$
+L is less than 1 h(n) is convergent
+\section{5.5 solution}
+$$h(n)=\bigg(-\frac{1}{2}\bigg)^nu(n)+\bigg(-\frac{1}{2}\bigg)^{n-2}u(n-2)$$
+$$\sum_{n=-\infty}^{\infty}h(n)=\sum_{n=-\infty}^{\infty}\bigg(-\frac{1}{2}\bigg)^nu(n)+\sum_{n=-\infty}^{\infty}\bigg(-\frac{1}{2}\bigg)^{n-2}u(n-2)$$
+$$\sum_{n=-\infty}^{\infty}h(n)=\sum_{n=0}^{\infty}\bigg(-\frac{1}{2}\bigg)^nu(n)+\sum_{n=2}^{\infty}\bigg(-\frac{1}{2}\bigg)^{n-2}u(n-2)$$
+$$\sum_{n=-\infty}^{\infty}h(n)=\sum_{n=0}^{\infty}\bigg(-\frac{1}{2}\bigg)^n+\sum_{n=2}^{\infty}\bigg(-\frac{1}{2}\bigg)^{n-2}$$
+$$\sum_{n=-\infty}^{\infty}h(n)=\frac{4}{3}$$
+\section{5.6}
+\section{5.9 solution}
+\section{5.10 solution}
+from 5.13 we know that
+$$y(n)=\sum_{k=-\infty}^{\infty}x(k)h(n-k)$$
+$$t=n-k$$
+
+$$y(n)=\sum_{n-t=-\infty}^{\infty}x(n-t)h(t) $$
+since n is finite 
+$$-\infty<\infty$$
+the above equation is equivalet to
+$$y(n)=\sum_{n=-\infty}^{\infty}x(n-t)h(t) $$
+hence proved
+\section{6.1 solution}
+
+\end{document}
