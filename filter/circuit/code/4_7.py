@@ -18,7 +18,7 @@ vn = np.pad(vn, (0,1), constant_values=(0,0)) + np.pad(vn, (1,0), constant_value
 vn[0] = 0
 plt.plot(t, 2*(1 - np.exp(-k*t))/3)
 plt.plot(t, (V2*tau/(2*C0*R2))*vn[:len(t)], '.')
-v3 = np.loadtxt('cktsig/codes/v3.txt')
+v3 = np.loadtxt('v3.txt')
 plt.plot(v3[:,0], v3[:,1], '.')
 plt.legend(['Theory (continuous)', 'Theory (discrete)', 'Simulation (ngspice)'])
 plt.show()
